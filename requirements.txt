@@ -1,0 +1,21 @@
+# Core
+feedparser>=6.0
+requests>=2.31
+beautifulsoup4>=4.12
+lxml>=5.0
+python-dotenv>=1.0
+python-dateutil>=2.8
+
+# Supabase
+supabase>=2.0
+
+# Translation
+deep-translator>=1.11
+
+# Testing
+pytest>=7.0
+
+# Optional (Phase 2)
+# praw>=7.7          # Reddit API
+# pixivpy3>=3.7      # Pixiv API
+# bilibili-api>=9.0  # Bilibili API

@@ -1,0 +1,38 @@
+name: Daily Digest
+
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 08:00 UTC daily
+  workflow_dispatch:       # Manual trigger
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run digest pipeline
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          RSSHUB_URL: ${{ secrets.RSSHUB_URL }}
+        run: python run.py
+
+      - name: Commit outputs
+        run: |
+          git config user.name "Digest Bot"
+          git config user.email "bot@anime-ai-digest"
+          git add outputs/
+          git diff --staged --quiet || git commit -m "📰 Daily digest $(date +%Y-%m-%d)"
+          git push
