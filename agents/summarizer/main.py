@@ -42,15 +42,16 @@ def _summarize_batch(items: list[dict]) -> list[dict]:
     prompt = f"""You are writing for "The Anime AI Digest" — a mid-week bulletin for anime and webtoon creators who use AI tools in their workflow.
 
 For each item below, write:
-- "summary": 2 sentences in the voice of a knowledgeable fellow creator (casual-expert, never corporate). Sentence 1 = what this is, concretely. Sentence 2 = why it matters RIGHT NOW for someone making anime/webtoon content. Max 60 words.
+- "summary": 2 sentences in an objective, informative tone (knowledgeable but neutral — never corporate, never prescriptive). Sentence 1 = what this is, concretely. Sentence 2 = the broader significance or what's notable about it. Max 60 words.
 - "tldr": A punchy 5-8 word hook that makes someone want to read more.
 
 Rules:
 - Never say "this article discusses" or "this paper presents"
-- If it's a LoRA, say what style/subject and what you can do with it
+- If it's a LoRA, say what style/subject it targets and its notable characteristics
 - If it's a model release, name the key capability improvement
-- If it's a tutorial, say what workflow it unlocks
+- If it's a tutorial, say what workflow it covers
 - Be specific about tools: name them (ComfyUI, Wan2, Clip Studio, etc.)
+- Be objective. Do not tell the reader what to do. Report facts, not recommendations.
 
 Items:
 {items_text}
@@ -89,10 +90,12 @@ def _extract_themes(items_with_summaries: list[dict]) -> list[str]:
     )
     prompt = f"""You are curating the weekly section headers for "The Anime AI Digest".
 
-Given these items, write 3-5 theme phrases that are ACTIONABLE and SPECIFIC — they tell anime/webtoon creators what they can go try or explore right now.
+Given these items, write 3-5 theme phrases that are OBJECTIVE and SPECIFIC — they describe what happened this period as factual news headlines, not instructions or suggestions.
 
-Good examples: "New Wan2 LoRAs for anime character consistency", "ComfyUI nodes for seamless animation loops", "Webtoon panel pacing techniques"
-Bad examples: "Bridging illustration and motion design", "Community-driven innovation", "Expanding storytelling formats"
+Good examples: "Wan2 LoRA ecosystem expands with character consistency focus", "ComfyUI nodes for animation loops gain traction", "New open-source video models target anime aesthetics"
+Bad examples: "Try new Wan2 LoRAs", "Use ComfyUI nodes for animation", "Start blending these tools", "Bridging illustration and motion design", "Community-driven innovation"
+
+NEVER use imperative voice. NEVER tell the reader what to do. Report trends and developments as an observer.
 
 Items:
 {items_text}
@@ -129,14 +132,20 @@ def _generate_highlights(themes: list[str], top_items: list[dict]) -> str:
     days = config.DIGEST_WINDOW_HOURS // 24
     date_str = datetime.now(timezone.utc).strftime("%B %d, %Y")
 
-    prompt = f"""You are writing the opening section of "The Anime AI Digest" — a mid-week bulletin for anime/webtoon/visual novel creators who use AI tools.
+    prompt = f"""You are writing the opening section of "The Anime AI Digest" — a mid-week bulletin covering AI tools for anime/webtoon/visual novel creation.
 
 Write 3 SHORT paragraphs (2-3 sentences each):
-1. The big story — what's the one thing everyone should know from the past {days} days?
-2. Community pulse — what tools, workflows, or LoRAs are people actually using?
-3. Creator's angle — how does this week's news change what you can make? End with one forward-looking sentence.
+1. The biggest development this period — what happened and who released it? State the facts.
+2. Community activity — what tools, workflows, or LoRAs are trending? Report factual observations about adoption and usage.
+3. Broader context — how does this fit into the current landscape of AI-assisted anime/webtoon creation? Note the significance without prescribing action.
 
-Voice: Talk directly to a fellow creator. Use "you" and "your workflow". Reference specific tools by name. No corporate speak.
+Voice: Objective news reporting with domain expertise. Reference specific tools by name. No corporate speak.
+
+CRITICAL RULES:
+- NEVER use imperative voice ("try", "start", "plug in", "check out", "explore").
+- NEVER tell the reader what to do or what their "next step" is.
+- NEVER use "you" or "your workflow".
+- Report facts, trends, and significance — not recommendations.
 
 Date: {date_str} (covering the past {days} days)
 Themes: {themes_text}

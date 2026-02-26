@@ -100,11 +100,6 @@ def _render_markdown(date_str: str, all_items: list[dict], summary_data: dict | 
         lines.append(summary_data["highlights"])
         lines.append("")
 
-    # Theme tags
-    if summary_data and summary_data.get("themes"):
-        themes_str = " | ".join(f"**{t}**" for t in summary_data["themes"])
-        lines.append(f"\n> {themes_str}\n")
-
     # Editor's pick
     pick_id = summary_data.get("editor_pick_id") if summary_data else None
     pick_reason = summary_data.get("editor_pick_reason", "") if summary_data else ""
@@ -248,10 +243,22 @@ def _render_category_section(cat_key: str, cat_label: str, cat_items: list[dict]
             summary = truncate(clean_html(item["body"]), 120) if item["body"] else ""
         cards_html += _render_item_card(item, idx, tldr, summary, pick_id)
 
-    # Compact links for the rest
+    # Compact links for the rest (collapsible)
     links_html = ""
-    for item in cat_items[FULL_CARDS_PER_CATEGORY:]:
-        links_html += _render_compact_link(item)
+    remaining_items = cat_items[FULL_CARDS_PER_CATEGORY:]
+    if remaining_items:
+        compact_rows = ""
+        for item in remaining_items:
+            compact_rows += _render_compact_link(item)
+        n = len(remaining_items)
+        links_html = f'''<tr><td style="padding:6px 32px 12px;">
+  <details>
+    <summary style="cursor:pointer;font-family:-apple-system,sans-serif;font-size:13px;color:{_MUTED};font-weight:500;list-style:none;-webkit-appearance:none;outline:none;">Show {n} more item{"s" if n != 1 else ""} &darr;</summary>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:6px;">
+    {compact_rows}
+    </table>
+  </details>
+</td></tr>'''
 
     return f'''<table width="100%" cellpadding="0" cellspacing="0" style="background:{_CARD};border:1px solid {_BORDER};margin-top:2px;">
 <tr><td style="padding:18px 32px 6px;">
@@ -288,19 +295,10 @@ def _render_bulletin_html(date_str: str, all_items: list[dict],
             if para:
                 paragraphs += f'<p style="margin:0 0 12px;font-family:Georgia,\'Times New Roman\',serif;font-size:15px;line-height:1.7;color:{_BODY_TEXT};">{escape(para)}</p>'
 
-        theme_badges = ""
-        if summary_data.get("themes"):
-            badges = "".join(
-                f'<span style="display:inline-block;background:{_ACCENT};color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;margin:2px 4px 2px 0;font-family:-apple-system,sans-serif;">{escape(t)}</span>'
-                for t in summary_data["themes"]
-            )
-            theme_badges = f'<div style="margin-top:14px;">{badges}</div>'
-
         brief_html = f'''<table width="100%" cellpadding="0" cellspacing="0" style="background:{_CARD};border:1px solid {_BORDER};">
 <tr><td style="padding:24px 32px;">
   <h2 style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;font-weight:700;color:{_BODY_TEXT};text-transform:uppercase;letter-spacing:1px;">Executive Brief</h2>
   {paragraphs}
-  {theme_badges}
 </td></tr></table>'''
 
     # --- Editor's Pick ---
