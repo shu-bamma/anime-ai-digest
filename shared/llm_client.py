@@ -8,7 +8,7 @@ import logging
 import random
 import time
 
-from openai import OpenAI, RateLimitError, APITimeoutError, APIConnectionError, APIStatusError
+from openai import AzureOpenAI, RateLimitError, APITimeoutError, APIConnectionError, APIStatusError
 
 from shared import config
 
@@ -22,14 +22,15 @@ _BASE_DELAY = 2.0
 _MAX_DELAY = 60.0
 
 
-def _get_client() -> OpenAI:
+def _get_client() -> AzureOpenAI:
     global _client
     if _client is None:
-        if not config.AZURE_OPENAI_BASE_URL or not config.AZURE_OPENAI_API_KEY:
-            raise RuntimeError("AZURE_OPENAI_BASE_URL and AZURE_OPENAI_API_KEY must be set")
-        _client = OpenAI(
-            base_url=config.AZURE_OPENAI_BASE_URL,
+        if not config.AZURE_OPENAI_ENDPOINT or not config.AZURE_OPENAI_API_KEY:
+            raise RuntimeError("AZURE_OPENAI_ENDPOINT and AZURE_OPENAI_API_KEY must be set")
+        _client = AzureOpenAI(
+            azure_endpoint=config.AZURE_OPENAI_ENDPOINT,
             api_key=config.AZURE_OPENAI_API_KEY,
+            api_version=config.AZURE_OPENAI_API_VERSION,
             timeout=120.0,
         )
     return _client
@@ -46,9 +47,11 @@ def generate(
     kwargs = {
         "model": config.LLM_MODEL,
         "messages": messages,
-        "max_tokens": max_tokens,
-        "temperature": temperature,
+        "max_completion_tokens": max_tokens,
     }
+    # gpt-5.2 only supports temperature=1 (default); skip if non-default
+    if temperature != 1.0:
+        logger.debug("Skipping temperature=%.1f (gpt-5.2 only supports default=1)", temperature)
     if response_format:
         kwargs["response_format"] = response_format
 

@@ -243,7 +243,7 @@ Return JSON: {{"facts": ["...", "...", "..."]}}"""
 
 def run_summarizer(run_id: str) -> dict:
     """Run the summarizer agent. Returns dict with themes, highlights, pick, and count."""
-    if not config.AZURE_OPENAI_API_KEY or not config.AZURE_OPENAI_BASE_URL:
+    if not config.AZURE_OPENAI_API_KEY or not config.AZURE_OPENAI_ENDPOINT:
         logger.warning("Azure OpenAI not configured — skipping summarization")
         return {"items_summarized": 0, "themes": [], "highlights": "",
                 "tldr_map": {}, "editor_pick_id": None, "editor_pick_reason": "",

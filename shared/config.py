@@ -21,8 +21,9 @@ RSSHUB_URL = os.getenv("RSSHUB_URL", "https://rsshub.app")
 
 # --- Azure OpenAI ---
 AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "")
-AZURE_OPENAI_BASE_URL = os.getenv("AZURE_OPENAI_BASE_URL", "")
-LLM_MODEL = os.getenv("LLM_MODEL", "gpt-5-chat")
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT", "")
+AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
+LLM_MODEL = os.getenv("LLM_MODEL", "gpt-5.2-chat")
 
 # --- Email delivery (Resend) ---
 RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
