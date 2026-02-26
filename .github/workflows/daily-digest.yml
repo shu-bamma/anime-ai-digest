@@ -1,9 +1,10 @@
-name: Daily Digest
+name: Mid-Week Digest
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # 08:00 UTC daily
-  workflow_dispatch:       # Manual trigger
+    # Tue/Thu at 08:00 UTC
+    - cron: '0 8 * * 2,4'
+  workflow_dispatch:
 
 jobs:
   digest:
@@ -27,6 +28,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           RSSHUB_URL: ${{ secrets.RSSHUB_URL }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_BASE_URL: ${{ secrets.AZURE_OPENAI_BASE_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DIGEST_RECIPIENTS: ${{ secrets.DIGEST_RECIPIENTS }}
+          DIGEST_FROM_EMAIL: ${{ secrets.DIGEST_FROM_EMAIL }}
+          DIGEST_WINDOW_HOURS: "72"
         run: python run.py
 
       - name: Commit outputs
@@ -34,5 +42,5 @@ jobs:
           git config user.name "Digest Bot"
           git config user.email "bot@anime-ai-digest"
           git add outputs/
-          git diff --staged --quiet || git commit -m "📰 Daily digest $(date +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "📰 Mid-week digest $(date +%Y-%m-%d)"
           git push

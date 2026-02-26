@@ -7,10 +7,16 @@ python-dotenv>=1.0
 python-dateutil>=2.8
 
 # Supabase
-supabase>=2.0
+supabase>=2.0,<2.11
 
 # Translation
 deep-translator>=1.11
+
+# LLM
+openai>=1.0
+
+# Email
+resend>=0.7.0
 
 # Testing
 pytest>=7.0

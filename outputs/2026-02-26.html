@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Anime AI Digest — 2026-02-26</title>
+<style>
+body{margin:0;padding:0;background:#f4f1eb;}
+a:hover{opacity:0.8;}
+@media(max-width:680px){
+  .bulletin-wrap{width:100%!important;}
+}
+</style>
+</head>
+<body style="margin:0;padding:0;background:#f4f1eb;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;">
+<center>
+<table class="bulletin-wrap" width="640" cellpadding="0" cellspacing="0" style="margin:20px auto;background:#f4f1eb;max-width:640px;">
+<tr><td>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#1a1a2e;border-radius:8px 8px 0 0;">
+<tr><td style="padding:28px 32px;">
+  <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:700;color:#f4f1eb;letter-spacing:-0.5px;">The Anime AI Digest</h1>
+  <p style="margin:6px 0 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;color:#f4f1eb;opacity:0.7;">2026-02-26 &middot; Covering the past 3 days</p>
+</td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e5e7eb;">
+<tr><td style="padding:24px 32px;">
+  <h2 style="margin:0 0 14px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;font-weight:700;color:#2d2d2d;text-transform:uppercase;letter-spacing:1px;">Executive Brief</h2>
+  <p style="margin:0 0 12px;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#2d2d2d;">The biggest development this period is the release of ComfyUI-AniSora, integrating Index-AniSora directly into the ComfyUI environment for anime-style video generation. The update enables single-node animated output and marks a notable expansion of ComfyUI’s video synthesis capabilities, coinciding with Wan and Skywork’s release of multi-billion parameter text-to-video and image-to-video models focused on motion fidelity. Together, these launches signal an intensified push toward integrated anime video pipelines within open-source ecosystems.</p><p style="margin:0 0 12px;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#2d2d2d;">Community activity centers on new ComfyUI nodes and LoRA experimentation, with AlcAI Nodes and comfyui-wan-i2v-control gaining traction for stylized effects and precise motion editing. Threads on Reddit highlight transitions to RTX 3090 setups for video-to-video workflows and active searches for anime LoRAs compatible with Wan 2.2. YoreSpot’s rapid adoption as a free alternative to CivitAI reflects the growing grassroots interest in accessible LoRA training and open video generation platforms.</p><p style="margin:0 0 12px;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.7;color:#2d2d2d;">In broader context, these developments underscore the convergence of illustration, animation, and interactive storytelling across AI tools such as Clip Studio Paint and Ren’Py. The integration of controllable video diffusion and cross-model interoperability aligns with research trends emphasizing efficiency and realism in generative motion. The current landscape shows a maturing ecosystem where open-source workflows increasingly bridge static art, animation, and narrative design.</p>
+  <div style="margin-top:14px;"><span style="display:inline-block;background:#e63946;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;margin:2px 4px 2px 0;font-family:-apple-system,sans-serif;">ComfyUI ecosystem expands with new anime-focused nodes and integrated video generation models</span><span style="display:inline-block;background:#e63946;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;margin:2px 4px 2px 0;font-family:-apple-system,sans-serif;">Wan and Skywork release multi-billion parameter text-to-video and image-to-video models advancing motion fidelity</span><span style="display:inline-block;background:#e63946;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;margin:2px 4px 2px 0;font-family:-apple-system,sans-serif;">Community discussions highlight LoRA training, hardware transitions, and workflow optimization for AI animation</span><span style="display:inline-block;background:#e63946;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;margin:2px 4px 2px 0;font-family:-apple-system,sans-serif;">Clip Studio and Ren’Py updates showcase growing crossover between illustration, animation, and interactive storytelling</span><span style="display:inline-block;background:#e63946;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px;margin:2px 4px 2px 0;font-family:-apple-system,sans-serif;">Research papers introduce new methods for controllable, efficient, and realistic video diffusion generation</span></div>
+</td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#fef3c7;border-left:4px solid #e63946;margin-top:2px;">
+<tr><td style="padding:18px 28px;">
+  <p style="margin:0 0 4px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#e63946;">⭐ Editor's Pick</p>
+  <a href="https://github.com/Yuan-ManX/ComfyUI-AniSora" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:17px;font-weight:700;color:#2d2d2d;text-decoration:none;">ComfyUI-AniSora</a>
+  <p style="margin:6px 0 0;font-family:-apple-system,sans-serif;font-size:13px;color:#6b7280;font-style:italic;">ComfyUI-AniSora enables one-click anime-style video generation directly inside ComfyUI, letting creators instantly prototype full animated scenes without complex setup or coding.</p>
+  <p style="margin:8px 0 0;font-family:Georgia,serif;font-size:14px;line-height:1.6;color:#2d2d2d;">ComfyUI-AniSora integrates Index-AniSora, an open-source animated video generation model, directly into ComfyUI for one-click anime-style video creation. It marks a major step in accessible multi-style anime production, spanning series, VTuber, and manga adaptation workflows.</p>
+</td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e5e7eb;margin-top:2px;">
+<tr><td style="padding:18px 32px 6px;">
+  <h2 style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;font-weight:700;color:#2d2d2d;text-transform:uppercase;letter-spacing:1px;">🎬 Model Releases &amp; Updates</h2>
+</td></tr>
+<tr><td style="padding:12px 32px 4px;">
+  <div style="background:#fdf6e3;border:1px solid #f0e6cc;border-radius:6px;padding:10px 14px;">
+    <ul style="margin:0;padding-left:16px;list-style:none;"><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 3 new 14B-parameter Wan-AI video models launched this week</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 720p output achieved by Wan2.1-I2V-14B-720P model</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 1.3B-parameter Wan2.1-T2V variant enables faster low-cost generation</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 12 trending video generation models featured across Hugging Face and arXiv</li></ul>
+  </div>
+</td></tr>
+<tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">1</div>
+    </td>
+    <td>
+      <p style="margin:0 0 2px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:600;color:#e63946;text-transform:uppercase;letter-spacing:0.5px;">Massive 14B text-to-video upgrade</p>
+      <a href="https://huggingface.co/Wan-AI/Wan2.1-T2V-14B" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">Wan-AI/Wan2.1-T2V-14B</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">Wan-AI/Wan2.1-T2V-14B is a 14-billion parameter text-to-video model in the Wan2.1 series. Its scale suggests major gains in temporal coherence and scene fidelity for AI-driven animation generation.</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">hf_trending</span>&middot;<span style="color:#6b7280;font-size:12px;">3h ago</span> &middot; <a href="https://huggingface.co/Wan-AI/Wan2.1-T2V-14B" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">2</div>
+    </td>
+    <td>
+      <p style="margin:0 0 2px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:600;color:#e63946;text-transform:uppercase;letter-spacing:0.5px;">14B I2V model hits 720p quality</p>
+      <a href="https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-720P" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">Wan-AI/Wan2.1-I2V-14B-720P</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">Wan-AI/Wan2.1-I2V-14B-720P is a high-resolution image-to-video model producing 720p outputs with 14B parameters. It marks a push toward cinematic-quality motion synthesis from static frames.</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">hf_trending</span>&middot;<span style="color:#6b7280;font-size:12px;">3h ago</span> &middot; <a href="https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-720P" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">3</div>
+    </td>
+    <td>
+      <p style="margin:0 0 2px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:600;color:#e63946;text-transform:uppercase;letter-spacing:0.5px;">Compact 1.3B text-to-video model</p>
+      <a href="https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">Wan-AI/Wan2.1-T2V-1.3B</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">Wan-AI/Wan2.1-T2V-1.3B is a lighter 1.3B parameter text-to-video model in the Wan2.1 lineup. It’s significant for enabling faster generation and lower hardware requirements while retaining core motion quality.</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">hf_trending</span>&middot;<span style="color:#6b7280;font-size:12px;">3h ago</span> &middot; <a href="https://huggingface.co/Wan-AI/Wan2.1-T2V-1.3B" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr>
+<tr><td style="padding:6px 32px 12px;">
+  <details>
+    <summary style="cursor:pointer;font-family:-apple-system,sans-serif;font-size:13px;color:#6b7280;font-weight:500;list-style:none;-webkit-appearance:none;outline:none;">Show 16 more items &darr;</summary>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:6px;">
+    <tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://huggingface.co/Skywork/SkyReels-V1-Hunyuan-I2V" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Skywork/SkyReels-V1-Hunyuan-I2V</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_trending &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://huggingface.co/Wan-AI/Wan2.1-I2V-14B-480P" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Wan-AI/Wan2.1-I2V-14B-480P</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_trending &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://huggingface.co/stepfun-ai/stepvideo-t2v" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">stepfun-ai/stepvideo-t2v</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_trending &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2602.20664" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">AnimeAgent: Is the Multi-Agent via Image-to-Video models a Good Disney Storytelling Artist?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://huggingface.co/Kijai/WanVideo_comfy" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Kijai/WanVideo_comfy</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_trending &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Comfy-Org/Wan_2.1_ComfyUI_repackaged</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_trending &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2506.08456" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Improving Motion in Image-to-Video Models via Adaptive Low-Pass Guidance</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2602.21188" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Human Video Generation from a Single Image with 3D Pose and View Control</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2602.20497" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">LESA: Learnable Stage-Aware Predictors for Diffusion Model Acceleration</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2511.17844" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Less is More: Data-Efficient Adaptation for Controllable Text-to-Video Generation</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2602.20999" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">VII: Visual Instruction Injection for Jailbreaking Image-to-Video Generation Models</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2602.20354" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">3DSPA: A 3D Semantic Point Autoencoder for Evaluating Video Realism</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tldr.takara.ai/p/2602.21188" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Human Video Generation from a Single Image with 3D Pose and View Control</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_papers &middot; 1d ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tldr.takara.ai/p/2602.20664" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">AnimeAgent: Is the Multi-Agent via Image-to-Video models a Good Disney Storytelling Artist?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_papers &middot; 1d ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://arxiv.org/abs/2508.17404" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">MoSA: Motion-Coherent Human Video Generation via Structure-Appearance Decoupling</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">arxiv_cv &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tldr.takara.ai/p/2602.21133" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">SOM-VQ: Topology-Aware Tokenization for Interactive Generative Models</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">hf_papers &middot; 1d ago</span>
+</td></tr>
+    </table>
+  </details>
+</td></tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e5e7eb;margin-top:2px;">
+<tr><td style="padding:18px 32px 6px;">
+  <h2 style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;font-weight:700;color:#2d2d2d;text-transform:uppercase;letter-spacing:1px;">📰 Industry News</h2>
+</td></tr>
+<tr><td style="padding:12px 32px 4px;">
+  <div style="background:#fdf6e3;border:1px solid #f0e6cc;border-radius:6px;padding:10px 14px;">
+    <ul style="margin:0;padding-left:16px;list-style:none;"><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 1 hit webtoon returning this fall with new side stories</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 2018 debut year for &#x27;The Remarried Empress&#x27; webtoon</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 100M+ global reads across major webtoon platforms</li></ul>
+  </div>
+</td></tr>
+<tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">1</div>
+    </td>
+    <td>
+      <p style="margin:0 0 2px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:600;color:#e63946;text-transform:uppercase;letter-spacing:0.5px;">Remarried Empress returns with new tales</p>
+      <a href="https://www.animenewsnetwork.com/news/2026-02-25/the-remarried-empress-webtoon-to-return-this-fall-with-side-stories/.234511" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">The Remarried Empress Webtoon to Return This Fall With Side Stories</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">The hit webtoon &#x27;The Remarried Empress&#x27; will return this fall with new side stories, according to production company MSTORYHUB. The announcement reassures fans after earlier confusion over the series’ continuation.</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">ann_news</span>&middot;<span style="color:#6b7280;font-size:12px;">2h ago</span> &middot; <a href="https://www.animenewsnetwork.com/news/2026-02-25/the-remarried-empress-webtoon-to-return-this-fall-with-side-stories/.234511" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">2</div>
+    </td>
+    <td>
+      
+      <a href="https://www.animenewsnetwork.com/news/2026-02-25/crunchyroll-adds-oshi-no-ko-anime-1st-2-seasons/.234566" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">Crunchyroll Adds Oshi no Ko Anime&#x27;s 1st 2 Seasons</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">1st season began streaming on Wednesday, 2nd season to stream in spring</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">ann_news</span>&middot;<span style="color:#6b7280;font-size:12px;">9h ago</span> &middot; <a href="https://www.animenewsnetwork.com/news/2026-02-25/crunchyroll-adds-oshi-no-ko-anime-1st-2-seasons/.234566" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">3</div>
+    </td>
+    <td>
+      
+      <a href="https://gigazine.net/news/20260226-openai-4-strategic-questions/" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">OpenAI has four fundamental strategic challenges</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">As a pioneering AI company, OpenAI is attracting large amounts of investment and developing products. However, there...</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">gigazine</span>&middot;<span style="color:#6b7280;font-size:12px;">2h ago</span> &middot; <a href="https://gigazine.net/news/20260226-openai-4-strategic-questions/" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr>
+<tr><td style="padding:6px 32px 12px;">
+  <details>
+    <summary style="cursor:pointer;font-family:-apple-system,sans-serif;font-size:13px;color:#6b7280;font-weight:500;list-style:none;-webkit-appearance:none;outline:none;">Show 4 more items &darr;</summary>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:6px;">
+    <tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://gigazine.net/news/20260226-israeli-soldiers-killed-gaza-aid-workers/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">The results of the investigation into the shooting death of 15 people by the Israeli military in Gaza, including emergency workers, will be made public, with some being shot just a few meters away.</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">gigazine &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.animenewsnetwork.com/news/2026-02-25/mappa-absorbs-sibling-studio-contrail-through-merger/.234577" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Mappa Absorbs Sibling Studio Contrail Through Merger</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">ann_news &middot; 5h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://gigazine.net/news/20260225-headline/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Headline news for February 25, 2026</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">gigazine &middot; 14h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.animenewsnetwork.com/news/2026-02-25/crunchyroll-screens-2nd-that-time-i-got-reincarnated-as-a-slime-film-in-u.s-canada-u.k-ireland-on-/.234569" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Crunchyroll Screens 2nd That Time I Got Reincarnated as a Slime Film in U.S., Canada, U.K., Ireland on May 1 (Updated)</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">ann_news &middot; 7h ago</span>
+</td></tr>
+    </table>
+  </details>
+</td></tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e5e7eb;margin-top:2px;">
+<tr><td style="padding:18px 32px 6px;">
+  <h2 style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;font-weight:700;color:#2d2d2d;text-transform:uppercase;letter-spacing:1px;">🎨 Community &amp; Workflows</h2>
+</td></tr>
+<tr><td style="padding:12px 32px 4px;">
+  <div style="background:#fdf6e3;border:1px solid #f0e6cc;border-radius:6px;padding:10px 14px;">
+    <ul style="margin:0;padding-left:16px;list-style:none;"><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 15–50% motion boost in new PainterI2VforKJ node</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 7 style presets powered by Qwen3-8B in ComfyUI-PromptGenerator</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 4-step LoRA workflows optimized in latest PainterI2V update</li><li style="margin:3px 0;font-family:-apple-system,sans-serif;font-size:12px;color:#2d2d2d;line-height:1.5;">📊 RTX 3090 setups trending for Wan 2.2 video-to-video animation</li></ul>
+  </div>
+</td></tr>
+<tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">1</div>
+    </td>
+    <td>
+      <p style="margin:0 0 2px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:600;color:#e63946;text-transform:uppercase;letter-spacing:0.5px;">One-click anime video generation in ComfyUI</p>
+      <a href="https://github.com/Yuan-ManX/ComfyUI-AniSora" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">ComfyUI-AniSora</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">ComfyUI-AniSora integrates Index-AniSora, an open-source animated video generation model, directly into ComfyUI for one-click anime-style video creation. It marks a major step in accessible multi-style anime production, spanning series, VTuber, and manga adaptation workflows.</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">comfyui_nodes</span>&middot;<span style="color:#6b7280;font-size:12px;">3h ago</span> &middot; <a href="https://github.com/Yuan-ManX/ComfyUI-AniSora" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">2</div>
+    </td>
+    <td>
+      <p style="margin:0 0 2px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:600;color:#e63946;text-transform:uppercase;letter-spacing:0.5px;">Free CivitAI-style art hub gaining traction</p>
+      <a href="https://www.reddit.com/r/comfyui/comments/1reqm5m/yorespot_the_free_ai_image_video_generator_thats/" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">YoreSpot — The Free AI Image &amp; Video Generator That&#x27;s Becoming the Best CivitAI Alternative (Train Your Own LoRAs, Daily Contests, Auctions, AI Toons &amp; More)</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">YoreSpot is a free AI art platform offering image and video generation, LoRA training, and community features like contests and auctions. Its rapid growth positions it as a notable grassroots alternative to CivitAI for creators seeking open participation.</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">reddit_comfyui</span>&middot;<span style="color:#6b7280;font-size:12px;">3h ago</span> &middot; <a href="https://www.reddit.com/r/comfyui/comments/1reqm5m/yorespot_the_free_ai_image_video_generator_thats/" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">3</div>
+    </td>
+    <td>
+      <p style="margin:0 0 2px;font-family:-apple-system,sans-serif;font-size:11px;font-weight:600;color:#e63946;text-transform:uppercase;letter-spacing:0.5px;">RTX 3090 setup for Wan 2.2 workflows</p>
+      <a href="https://www.reddit.com/r/comfyui/comments/1renbkp/transitioning_to_rtx_3090_need_a_robust_v2v/" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">Transitioning to RTX 3090: Need a robust V2V Workflow for Object Swapping &amp; Scene Generation (Wan 2.2)</a>
+      <p style="margin:5px 0 0;font-family:-apple-system,sans-serif;font-size:13px;line-height:1.5;color:#2d2d2d;opacity:0.85;">A creator outlines plans to build a local RTX 3090 setup for object swapping and scene generation using Wan 2.2 and ComfyUI. The post highlights the growing interest in robust video-to-video workflows for independent animation projects.</p>
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">reddit_comfyui</span>&middot;<span style="color:#6b7280;font-size:12px;">5h ago</span> &middot; <a href="https://www.reddit.com/r/comfyui/comments/1renbkp/transitioning_to_rtx_3090_need_a_robust_v2v/" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr>
+<tr><td style="padding:6px 32px 12px;">
+  <details>
+    <summary style="cursor:pointer;font-family:-apple-system,sans-serif;font-size:13px;color:#6b7280;font-weight:500;list-style:none;-webkit-appearance:none;outline:none;">Show 44 more items &darr;</summary>
+    <table width="100%" cellpadding="0" cellspacing="0" style="margin-top:6px;">
+    <tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/comfyui/comments/1resjud/any_good_animecartoonanimation_lora_for_wan_22/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">any good anime/cartoon/animation lora for wan 2.2?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_comfyui &middot; 2h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/comfyui/comments/1reuu5j/newb_already_use_and_need_python_31312_safe_to/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Newb. Already use (and need) Python 3.13.12. Safe to install ComfyUI?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_comfyui &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://github.com/AlcAI-AnimeHaven/AlcAI-nodes" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">AlcAI Nodes for ComfyUI</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">comfyui_nodes &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://github.com/Limbicnation/ComfyUI-PromptGenerator" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">ComfyUI-PromptGenerator</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">comfyui_nodes &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://github.com/maxczc/comfyui-sora-node" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">comfyui-sora-node</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">comfyui_nodes &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://github.com/shootthesound/comfyui-wan-i2v-control" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">comfyui-wan-i2v-control</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">comfyui_nodes &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://github.com/princepainter/ComfyUI-PainterI2Vadvanced" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">ComfyUI-PainterI2Vadvanced</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">comfyui_nodes &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://github.com/princepainter/ComfyUI-PainterI2VforKJ" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">ComfyUI-PainterI2VforKJ</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">comfyui_nodes &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://github.com/princepainter/ComfyUI-PainterI2V" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">ComfyUI-PainterI2V</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">comfyui_nodes &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/comfyui/comments/1rev7a9/does_anyone_have_a_workflow_for_creating_good/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Does anyone have a workflow for creating good LORA source images?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_comfyui &middot; just now</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1rehoae/d20_dice_based_battle_engine_for_renpy/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">D20 Dice Based Battle Engine for Ren’Py</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; 9h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1rehg95/so_im_gonna_plan_to_make_a_better_version_of_my/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">So, I’m gonna’ plan to make a better version of my first Spanish WEBTOON, Blades.. (idk how to flair this)</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; 9h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1revfqt/new_chapter_just_perfect_english_and_spanish_3/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">New chapter &quot;Just perfect &quot; English and spanish &lt;3</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; just now</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/comfyui/comments/1reuc5n/considering_switching_from_runpod_to_tensordock/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Considering switching from RunPod to TensorDock to run ComfyUI. Worth it?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_comfyui &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1rev5ej/adding_spritesheet_system/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Adding Spritesheet system</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; just now</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/7477" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">10 FEATURES I WISH I KNEW STARTING A WEBTOON</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/2792" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Beginner&#x27;s Guide to Making a Webtoon!561,4331,471</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/4143" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Webtoon 101 [By an Original WEBTOON creator]58,449602</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 2h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1ret0se/music_doesnt_work/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Music doesn&#x27;t work</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; 2h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1res7b4/episode_26_is_here/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Episode 26 is here!!!!</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; 2h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/4474" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">How to use CLIP STUDIO PAINT for Manga#1Roughly Draw with Perspective Rulers! A Course on How to Quickly Draw Manga Backgrounds with Shortcuts!!115,0001050</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 2h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/comfyui/comments/1rej5vj/comfyui_image_to_image_workflow_with_controlnet/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Comfyui image to image workflow with controlnet (canny and depth) and IPAdapter for style transfer (or LoRA?)</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_comfyui &middot; 8h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/comfyui/comments/1reqp62/best_checkpoint_lora_for_dark_or_grim_fantasy/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Best Checkpoint / Lora for Dark or Grim Fantasy?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_comfyui &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1rec7vo/announcing_citadel_a_scifi_vn_about_a_journey_to/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Announcing CITADEL, a sci-fi VN about a journey to a lone tower in search of your identity.</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; 12h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1rem7vy/webtoon_marketer/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Webtoon Marketer</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; 6h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1rekx4f/still_building_branchpy_now_offering_2_free/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Still building BranchPy. Now offering 2 free structural audits for Ren’Py devs.</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; 7h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1re8aer/i_am_just_starting_to_get_into_the_planning_phase/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">I am just starting to get into the planning phase of my AVN.</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; 16h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1reixba/jsoncallback_causes_attribute_error/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">jsoncallback causes attribute error</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; 8h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/3051" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Shading Techniques for Characters and Landscapes (+Video)</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/3237" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">How to import sounds into Clip Studio Paint</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/8732" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Animate Illuminated Scenes in Clip Studio PAINT</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://tips.clip-studio.com/en-us/articles/1881" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Essential Digital Painting Tutorials#3Basic Digital Coloring and Brush Adjustments</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">clip_studio &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/SillyTavernAI/comments/1retz2u/why_do_i_only_have_32k_context_size_with_gemini/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Why do I only have 32k context size with Gemini 3.1? It’s normal with 3.0 and 3.1 via OpenRouter.</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_sillytavernai &middot; 1h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1reex28/hiring_script_story_editor_for_lgbtq_supernatural/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">[Hiring] Script &amp; Story Editor for LGBTQ Supernatural Romance Webtoon</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; 10h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/SillyTavernAI/comments/1rerwst/glm_5_is_suddenly_refusing_in_nsfw_chats/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">GLM 5 is suddenly refusing in NSFW chats</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_sillytavernai &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1red6gg/the_only_right_way_to_manipulate_someone_to_buy/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">The only right way to manipulate someone to buy your tart (even when they have no money✨</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; 11h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1rer6sa/girls_night_out_in_the_stars_with_my_ocs/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Girls night out in the stars with my ocs</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; 3h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/RenPy/comments/1re3b4n/a_philosophical_discussion_of_worms_kinetic/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">A Philosophical Discussion of Worms - Kinetic Visual Novel Demo</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_renpy &middot; 20h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/SillyTavernAI/comments/1repk7j/how_do_you_enable_reasoning_thinking_with_gemini/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">How do you enable Reasoning / Thinking with Gemini 3 Flash Preview via Openrouter?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_sillytavernai &middot; 4h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/WebtoonCanvas/comments/1reo70t/a_preview_of_episode_1_of_the_vampire_hunter_link/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">A preview of episode 1 of The Vampire Hunter! Link is in my bio or in the bottom of your curious! ^w^</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_webtooncanvas &middot; 5h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/SillyTavernAI/comments/1remjfp/glm5_via_nanogpt_suddenly_very_stupid/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">GLM-5 via NanoGPT suddenly very stupid?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_sillytavernai &middot; 6h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/SillyTavernAI/comments/1re7azb/platform_for_games_approach_to_ai_roleplaying/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">Platform for Games Approach to AI Roleplaying?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_sillytavernai &middot; 17h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/SillyTavernAI/comments/1rehw7l/bettersimtracker_210_is_now_released_nonnumeric/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">BetterSimTracker 2.1.0 is now released - non-numeric stats update</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_sillytavernai &middot; 8h ago</span>
+</td></tr><tr><td style="padding:6px 32px 6px 68px;border-bottom:1px solid #e5e7eb;">
+  <a href="https://www.reddit.com/r/SillyTavernAI/comments/1reewjv/how_do_i_import_janitor_chats_to_st/" target="_blank" style="font-family:-apple-system,sans-serif;font-size:13px;color:#2d2d2d;text-decoration:none;font-weight:500;">How do I import janitor chats to ST?</a>
+  <span style="font-size:11px;color:#6b7280;margin-left:6px;">reddit_sillytavernai &middot; 10h ago</span>
+</td></tr>
+    </table>
+  </details>
+</td></tr>
+</table><table width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border:1px solid #e5e7eb;margin-top:2px;">
+<tr><td style="padding:18px 32px 6px;">
+  <h2 style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;font-weight:700;color:#2d2d2d;text-transform:uppercase;letter-spacing:1px;">📺 YouTube</h2>
+</td></tr>
+
+<tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">1</div>
+    </td>
+    <td>
+      
+      <a href="https://www.youtube.com/shorts/E69jPG7AEmU" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">Reborn in London 🖤 Get tickets now and see #TheBrideMovie in theaters March 6.</a>
+      
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">youtube_olivio_sarikas</span>&middot;<span style="color:#6b7280;font-size:12px;">1h ago</span> &middot; <a href="https://www.youtube.com/shorts/E69jPG7AEmU" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">2</div>
+    </td>
+    <td>
+      
+      <a href="https://www.youtube.com/shorts/8II8tAJpZjI" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">No thoughts. Just Kombat. Mortal Kombat II arrives in theaters and @imaxmovies May8.</a>
+      
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">youtube_olivio_sarikas</span>&middot;<span style="color:#6b7280;font-size:12px;">2h ago</span> &middot; <a href="https://www.youtube.com/shorts/8II8tAJpZjI" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr><tr><td style="padding:14px 32px;border-bottom:1px solid #e5e7eb;">
+  <table cellpadding="0" cellspacing="0"><tr>
+    <td style="vertical-align:top;padding-right:12px;">
+      <div style="width:24px;height:24px;border-radius:50%;background:#e63946;color:#fff;font-family:-apple-system,sans-serif;font-size:12px;font-weight:700;text-align:center;line-height:24px;">3</div>
+    </td>
+    <td>
+      
+      <a href="https://www.youtube.com/shorts/3UJYoyopSKw" target="_blank" style="font-family:Georgia,'Times New Roman',serif;font-size:15px;font-weight:600;color:#2d2d2d;text-decoration:none;line-height:1.3;">I would prefer not to. #TheBrideMovieonly in theaters and lMAX March 6.</a>
+      
+      <p style="margin:6px 0 0;"><span style="color:#6b7280;font-size:12px;">youtube_olivio_sarikas</span>&middot;<span style="color:#6b7280;font-size:12px;">2h ago</span> &middot; <a href="https://www.youtube.com/shorts/3UJYoyopSKw" target="_blank" style="color:#e63946;font-size:12px;text-decoration:none;font-family:-apple-system,sans-serif;">Read&nbsp;more&nbsp;&rarr;</a></p>
+    </td>
+  </tr></table>
+</td></tr>
+
+</table>
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-top:2px;">
+<tr><td style="padding:20px 32px;text-align:center;">
+  <p style="margin:0;font-family:-apple-system,sans-serif;font-size:12px;color:#6b7280;">
+    The Anime AI Digest &middot; <a href="https://github.com/shu-bamma/anime-ai-digest" target="_blank" style="color:#e63946;text-decoration:none;">Source</a>
+  </p>
+  <p style="margin:4px 0 0;font-family:-apple-system,sans-serif;font-size:11px;color:#6b7280;opacity:0.6;">
+    Curated with AI, built for creators.
+  </p>
+</td></tr></table>
+</td></tr>
+</table>
+</center>
+</body>
+</html>
