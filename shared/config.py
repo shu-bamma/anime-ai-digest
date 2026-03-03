@@ -37,7 +37,6 @@ DIGEST_WINDOW_HOURS = int(os.getenv("DIGEST_WINDOW_HOURS", "72"))
 
 # --- GitHub repos to track (owner, repo, source_id) ---
 GITHUB_REPOS = [
-    ("Wan-AI", "Wan-Video", "github_wan_video"),
     ("bilibili", "Index-AniSora", "github_anisora"),
     ("hpcaitech", "Open-Sora", "github_open_sora"),
     ("Tencent", "HunyuanVideo", "github_hunyuan_video"),

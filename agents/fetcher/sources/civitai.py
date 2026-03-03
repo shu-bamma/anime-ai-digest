@@ -55,7 +55,7 @@ def fetch() -> list[dict]:
                             "downloads": stats.get("downloadCount", 0),
                             "rating": stats.get("rating", 0),
                             "favorites": stats.get("favoriteCount", 0),
-                            "tags": [t.get("name", "") for t in model.get("tags", [])],
+                            "tags": model.get("tags", []),
                             "creator": model.get("creator", {}).get("username", ""),
                         },
                     })
